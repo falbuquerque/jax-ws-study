@@ -1,12 +1,15 @@
 
 package falbuquerque.study.ws.amazon.client.generated;
 
+import java.util.concurrent.Future;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.ws.AsyncHandler;
+import javax.xml.ws.Response;
 
 
 /**
@@ -27,6 +30,31 @@ public interface AWSECommerceServicePortType {
      * 
      * @param body
      * @return
+     *     returns javax.xml.ws.Response<falbuquerque.study.ws.amazon.client.generated.ItemSearchResponse>
+     */
+    @WebMethod(operationName = "ItemSearch", action = "http://soap.amazon.com/ItemSearch")
+    public Response<ItemSearchResponse> itemSearchAsync(
+        @WebParam(name = "ItemSearch", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        ItemSearch body);
+
+    /**
+     * 
+     * @param body
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "ItemSearch", action = "http://soap.amazon.com/ItemSearch")
+    public Future<?> itemSearchAsync(
+        @WebParam(name = "ItemSearch", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        ItemSearch body,
+        @WebParam(name = "ItemSearchResponse", targetNamespace = "", partName = "asyncHandler")
+        AsyncHandler<ItemSearchResponse> asyncHandler);
+
+    /**
+     * 
+     * @param body
+     * @return
      *     returns falbuquerque.study.ws.amazon.client.generated.ItemSearchResponse
      */
     @WebMethod(operationName = "ItemSearch", action = "http://soap.amazon.com/ItemSearch")
@@ -34,6 +62,31 @@ public interface AWSECommerceServicePortType {
     public ItemSearchResponse itemSearch(
         @WebParam(name = "ItemSearch", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
         ItemSearch body);
+
+    /**
+     * 
+     * @param body
+     * @return
+     *     returns javax.xml.ws.Response<falbuquerque.study.ws.amazon.client.generated.ItemLookupResponse>
+     */
+    @WebMethod(operationName = "ItemLookup", action = "http://soap.amazon.com/ItemLookup")
+    public Response<ItemLookupResponse> itemLookupAsync(
+        @WebParam(name = "ItemLookup", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        ItemLookup body);
+
+    /**
+     * 
+     * @param body
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "ItemLookup", action = "http://soap.amazon.com/ItemLookup")
+    public Future<?> itemLookupAsync(
+        @WebParam(name = "ItemLookup", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        ItemLookup body,
+        @WebParam(name = "ItemLookupResponse", targetNamespace = "", partName = "asyncHandler")
+        AsyncHandler<ItemLookupResponse> asyncHandler);
 
     /**
      * 
@@ -51,6 +104,31 @@ public interface AWSECommerceServicePortType {
      * 
      * @param body
      * @return
+     *     returns javax.xml.ws.Response<falbuquerque.study.ws.amazon.client.generated.BrowseNodeLookupResponse>
+     */
+    @WebMethod(operationName = "BrowseNodeLookup", action = "http://soap.amazon.com/BrowseNodeLookup")
+    public Response<BrowseNodeLookupResponse> browseNodeLookupAsync(
+        @WebParam(name = "BrowseNodeLookup", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        BrowseNodeLookup body);
+
+    /**
+     * 
+     * @param body
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "BrowseNodeLookup", action = "http://soap.amazon.com/BrowseNodeLookup")
+    public Future<?> browseNodeLookupAsync(
+        @WebParam(name = "BrowseNodeLookup", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        BrowseNodeLookup body,
+        @WebParam(name = "BrowseNodeLookupResponse", targetNamespace = "", partName = "asyncHandler")
+        AsyncHandler<BrowseNodeLookupResponse> asyncHandler);
+
+    /**
+     * 
+     * @param body
+     * @return
      *     returns falbuquerque.study.ws.amazon.client.generated.BrowseNodeLookupResponse
      */
     @WebMethod(operationName = "BrowseNodeLookup", action = "http://soap.amazon.com/BrowseNodeLookup")
@@ -58,6 +136,31 @@ public interface AWSECommerceServicePortType {
     public BrowseNodeLookupResponse browseNodeLookup(
         @WebParam(name = "BrowseNodeLookup", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
         BrowseNodeLookup body);
+
+    /**
+     * 
+     * @param body
+     * @return
+     *     returns javax.xml.ws.Response<falbuquerque.study.ws.amazon.client.generated.SimilarityLookupResponse>
+     */
+    @WebMethod(operationName = "SimilarityLookup", action = "http://soap.amazon.com/SimilarityLookup")
+    public Response<SimilarityLookupResponse> similarityLookupAsync(
+        @WebParam(name = "SimilarityLookup", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        SimilarityLookup body);
+
+    /**
+     * 
+     * @param body
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "SimilarityLookup", action = "http://soap.amazon.com/SimilarityLookup")
+    public Future<?> similarityLookupAsync(
+        @WebParam(name = "SimilarityLookup", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        SimilarityLookup body,
+        @WebParam(name = "SimilarityLookupResponse", targetNamespace = "", partName = "asyncHandler")
+        AsyncHandler<SimilarityLookupResponse> asyncHandler);
 
     /**
      * 
@@ -75,6 +178,31 @@ public interface AWSECommerceServicePortType {
      * 
      * @param body
      * @return
+     *     returns javax.xml.ws.Response<falbuquerque.study.ws.amazon.client.generated.CartGetResponse>
+     */
+    @WebMethod(operationName = "CartGet", action = "http://soap.amazon.com/CartGet")
+    public Response<CartGetResponse> cartGetAsync(
+        @WebParam(name = "CartGet", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        CartGet body);
+
+    /**
+     * 
+     * @param body
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "CartGet", action = "http://soap.amazon.com/CartGet")
+    public Future<?> cartGetAsync(
+        @WebParam(name = "CartGet", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        CartGet body,
+        @WebParam(name = "CartGetResponse", targetNamespace = "", partName = "asyncHandler")
+        AsyncHandler<CartGetResponse> asyncHandler);
+
+    /**
+     * 
+     * @param body
+     * @return
      *     returns falbuquerque.study.ws.amazon.client.generated.CartGetResponse
      */
     @WebMethod(operationName = "CartGet", action = "http://soap.amazon.com/CartGet")
@@ -82,6 +210,31 @@ public interface AWSECommerceServicePortType {
     public CartGetResponse cartGet(
         @WebParam(name = "CartGet", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
         CartGet body);
+
+    /**
+     * 
+     * @param body
+     * @return
+     *     returns javax.xml.ws.Response<falbuquerque.study.ws.amazon.client.generated.CartCreateResponse>
+     */
+    @WebMethod(operationName = "CartCreate", action = "http://soap.amazon.com/CartCreate")
+    public Response<CartCreateResponse> cartCreateAsync(
+        @WebParam(name = "CartCreate", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        CartCreate body);
+
+    /**
+     * 
+     * @param body
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "CartCreate", action = "http://soap.amazon.com/CartCreate")
+    public Future<?> cartCreateAsync(
+        @WebParam(name = "CartCreate", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        CartCreate body,
+        @WebParam(name = "CartCreateResponse", targetNamespace = "", partName = "asyncHandler")
+        AsyncHandler<CartCreateResponse> asyncHandler);
 
     /**
      * 
@@ -99,6 +252,31 @@ public interface AWSECommerceServicePortType {
      * 
      * @param body
      * @return
+     *     returns javax.xml.ws.Response<falbuquerque.study.ws.amazon.client.generated.CartAddResponse>
+     */
+    @WebMethod(operationName = "CartAdd", action = "http://soap.amazon.com/CartAdd")
+    public Response<CartAddResponse> cartAddAsync(
+        @WebParam(name = "CartAdd", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        CartAdd body);
+
+    /**
+     * 
+     * @param body
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "CartAdd", action = "http://soap.amazon.com/CartAdd")
+    public Future<?> cartAddAsync(
+        @WebParam(name = "CartAdd", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        CartAdd body,
+        @WebParam(name = "CartAddResponse", targetNamespace = "", partName = "asyncHandler")
+        AsyncHandler<CartAddResponse> asyncHandler);
+
+    /**
+     * 
+     * @param body
+     * @return
      *     returns falbuquerque.study.ws.amazon.client.generated.CartAddResponse
      */
     @WebMethod(operationName = "CartAdd", action = "http://soap.amazon.com/CartAdd")
@@ -111,6 +289,31 @@ public interface AWSECommerceServicePortType {
      * 
      * @param body
      * @return
+     *     returns javax.xml.ws.Response<falbuquerque.study.ws.amazon.client.generated.CartModifyResponse>
+     */
+    @WebMethod(operationName = "CartModify", action = "http://soap.amazon.com/CartModify")
+    public Response<CartModifyResponse> cartModifyAsync(
+        @WebParam(name = "CartModify", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        CartModify body);
+
+    /**
+     * 
+     * @param body
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "CartModify", action = "http://soap.amazon.com/CartModify")
+    public Future<?> cartModifyAsync(
+        @WebParam(name = "CartModify", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        CartModify body,
+        @WebParam(name = "CartModifyResponse", targetNamespace = "", partName = "asyncHandler")
+        AsyncHandler<CartModifyResponse> asyncHandler);
+
+    /**
+     * 
+     * @param body
+     * @return
      *     returns falbuquerque.study.ws.amazon.client.generated.CartModifyResponse
      */
     @WebMethod(operationName = "CartModify", action = "http://soap.amazon.com/CartModify")
@@ -118,6 +321,31 @@ public interface AWSECommerceServicePortType {
     public CartModifyResponse cartModify(
         @WebParam(name = "CartModify", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
         CartModify body);
+
+    /**
+     * 
+     * @param body
+     * @return
+     *     returns javax.xml.ws.Response<falbuquerque.study.ws.amazon.client.generated.CartClearResponse>
+     */
+    @WebMethod(operationName = "CartClear", action = "http://soap.amazon.com/CartClear")
+    public Response<CartClearResponse> cartClearAsync(
+        @WebParam(name = "CartClear", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        CartClear body);
+
+    /**
+     * 
+     * @param body
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "CartClear", action = "http://soap.amazon.com/CartClear")
+    public Future<?> cartClearAsync(
+        @WebParam(name = "CartClear", targetNamespace = "http://webservices.amazon.com/AWSECommerceService/2011-08-01", partName = "body")
+        CartClear body,
+        @WebParam(name = "CartClearResponse", targetNamespace = "", partName = "asyncHandler")
+        AsyncHandler<CartClearResponse> asyncHandler);
 
     /**
      * 
