@@ -1,11 +1,3 @@
 apply plugin: 'java'
 sourceCompatibility = 1.8
 version = '1.0.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile 'com.sun.xml.ws:jaxws-rt:2.2.10'
-}
