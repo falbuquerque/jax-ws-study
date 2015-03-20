@@ -1,4 +1,4 @@
-package falbuquerque.study.ws.rabbit.client;
+package falbuquerque.study.ws.rabbit.client.handler;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,9 +6,6 @@ import java.util.List;
 import javax.xml.ws.handler.Handler;
 import javax.xml.ws.handler.HandlerResolver;
 import javax.xml.ws.handler.PortInfo;
-
-import falbuquerque.study.ws.rabbit.client.handler.ArgHandler;
-import falbuquerque.study.ws.rabbit.client.handler.UUIDHandler;
 
 public class ClientHandlerResolver implements HandlerResolver {
 
