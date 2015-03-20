@@ -38,9 +38,9 @@ public class UUIDHandler implements SOAPHandler<SOAPMessageContext> {
                 uuidHeaderElement.setActor(SOAPConstants.URI_SOAP_ACTOR_NEXT);
                 uuidHeaderElement.addTextNode(UUID.randomUUID().toString());
 
-                message.saveChanges();
-                message.writeTo(System.out);
-            } catch (final SOAPException | IOException e) {
+                // message.saveChanges(); // apparently unnecessary, even when writeTo is not called
+                // message.writeTo(System.out);
+            } catch (final SOAPException e) {
                 e.printStackTrace();
             }
 

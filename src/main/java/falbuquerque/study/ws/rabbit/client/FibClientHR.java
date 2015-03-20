@@ -10,7 +10,7 @@ public class FibClientHR {
 
     public static void main(String[] args) throws MalformedURLException {
         final RabbitCounterService service = new RabbitCounterService();
-//        service.setHandlerResolver(new ClientHandlerResolver());
+        // service.setHandlerResolver(new ClientHandlerResolver());
 
         final RabbitCounter counter = service.getRabbitCounterPort();
 
