@@ -5,12 +5,13 @@ import java.net.MalformedURLException;
 import falbuquerque.study.ws.rabbit.client.generated.FibException_Exception;
 import falbuquerque.study.ws.rabbit.client.generated.RabbitCounter;
 import falbuquerque.study.ws.rabbit.client.generated.RabbitCounterService;
+import falbuquerque.study.ws.rabbit.client.handler.ClientHandlerResolver;
 
 public class FibClientHR {
 
     public static void main(String[] args) throws MalformedURLException {
         final RabbitCounterService service = new RabbitCounterService();
-        // service.setHandlerResolver(new ClientHandlerResolver());
+        service.setHandlerResolver(new ClientHandlerResolver());
 
         final RabbitCounter counter = service.getRabbitCounterPort();
 

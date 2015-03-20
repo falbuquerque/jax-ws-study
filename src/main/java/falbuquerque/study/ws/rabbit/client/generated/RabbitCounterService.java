@@ -3,8 +3,6 @@ package falbuquerque.study.ws.rabbit.client.generated;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-
-import javax.jws.HandlerChain;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import javax.xml.ws.WebEndpoint;
@@ -20,7 +18,6 @@ import javax.xml.ws.WebServiceFeature;
  * 
  */
 @WebServiceClient(name = "RabbitCounterService", targetNamespace = "http://rabbit.ws.study.falbuquerque/", wsdlLocation = "http://127.0.0.1:9877/rabbit?wsdl")
-@HandlerChain(file = "handler-chain-client.xml")
 public class RabbitCounterService
     extends Service
 {

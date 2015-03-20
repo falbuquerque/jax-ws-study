@@ -3,9 +3,12 @@ package falbuquerque.study.ws.rabbit;
 import javax.jws.HandlerChain;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import javax.xml.ws.BindingType;
+import javax.xml.ws.soap.SOAPBinding;
 
 @WebService
 @HandlerChain(file = "handler-chain-server.xml")
+@BindingType(SOAPBinding.SOAP12HTTP_BINDING)
 public class RabbitCounter {
 
     @WebMethod

@@ -36,11 +36,12 @@ public class UUIDHandler implements SOAPHandler<SOAPMessageContext> {
                 final QName uuidHeader = new QName("http://ws.handler.study.falbuquerque/", "uuid");
                 final SOAPHeaderElement uuidHeaderElement = header.addHeaderElement(uuidHeader);
                 uuidHeaderElement.setActor(SOAPConstants.URI_SOAP_ACTOR_NEXT);
+                uuidHeaderElement.setMustUnderstand(true);
                 uuidHeaderElement.addTextNode(UUID.randomUUID().toString());
 
                 // message.saveChanges(); // apparently unnecessary, even when writeTo is not called
-                // message.writeTo(System.out);
-            } catch (final SOAPException e) {
+                message.writeTo(System.out);
+            } catch (final SOAPException | IOException e) {
                 e.printStackTrace();
             }
 
