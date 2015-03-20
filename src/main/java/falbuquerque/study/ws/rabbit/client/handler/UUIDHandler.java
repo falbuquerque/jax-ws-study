@@ -1,9 +1,8 @@
-package falbuquerque.study.ws.handler;
+package falbuquerque.study.ws.rabbit.client.handler;
 
 import java.io.IOException;
 import java.util.Set;
 import java.util.UUID;
-import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 import javax.xml.namespace.QName;
@@ -19,7 +18,7 @@ import javax.xml.ws.handler.soap.SOAPMessageContext;
 
 public class UUIDHandler implements SOAPHandler<SOAPMessageContext> {
 
-    private final Logger logger = LogManager.getLogManager().getLogger("ClientSideLogger");
+    private final Logger logger = Logger.getLogger("ClientSideLogger");
 
     @Override
     public boolean handleMessage(final SOAPMessageContext context) {
@@ -47,7 +46,7 @@ public class UUIDHandler implements SOAPHandler<SOAPMessageContext> {
 
         }
 
-        return true; // continue down the chain
+        return true;
     }
 
     @Override

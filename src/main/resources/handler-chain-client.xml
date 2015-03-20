@@ -4,7 +4,11 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<javaee:handler-chain>
 		<javaee:handler>
-			<javaee:handler-class>falbuquerque.study.ws.handler.UUIDHandler
+			<javaee:handler-class>falbuquerque.study.ws.rabbit.client.handler.UUIDHandler
+			</javaee:handler-class>
+		</javaee:handler>
+		<javaee:handler>
+			<javaee:handler-class>falbuquerque.study.ws.rabbit.client.handler.ArgHandler
 			</javaee:handler-class>
 		</javaee:handler>
 	</javaee:handler-chain>
